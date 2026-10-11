@@ -1,0 +1,25 @@
+output "oda_oda_private_endpoint_attachments_lookup_id" {
+  description = "Map of id values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no id are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.id if v.id != null && length(v.id) > 0 }
+}
+output "oda_oda_private_endpoint_attachments_lookup_compartment_id" {
+  description = "Map of compartment_id values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no compartment_id are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.compartment_id if v.compartment_id != null && length(v.compartment_id) > 0 }
+}
+output "oda_oda_private_endpoint_attachments_lookup_filter" {
+  description = "Map of filter values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no filter are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.filter if v.filter != null && length(v.filter) > 0 }
+}
+output "oda_oda_private_endpoint_attachments_lookup_oda_private_endpoint_attachment_collection" {
+  description = "Map of oda_private_endpoint_attachment_collection values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no oda_private_endpoint_attachment_collection are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.oda_private_endpoint_attachment_collection if v.oda_private_endpoint_attachment_collection != null && length(v.oda_private_endpoint_attachment_collection) > 0 }
+}
+output "oda_oda_private_endpoint_attachments_lookup_oda_private_endpoint_id" {
+  description = "Map of oda_private_endpoint_id values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no oda_private_endpoint_id are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.oda_private_endpoint_id if v.oda_private_endpoint_id != null && length(v.oda_private_endpoint_id) > 0 }
+}
+output "oda_oda_private_endpoint_attachments_lookup_state" {
+  description = "Map of state values across all oda_oda_private_endpoint_attachments_lookup, keyed the same as var.oda_oda_private_endpoint_attachments_lookup except keys with no state are omitted"
+  value       = { for k, v in data.oci_oda_oda_private_endpoint_attachments.oda_oda_private_endpoint_attachments_lookup : k => v.state if v.state != null && length(v.state) > 0 }
+}
+
